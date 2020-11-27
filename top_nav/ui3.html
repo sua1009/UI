@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui_news</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            margin: 0px auto;
+            width: 960px;
+        }
+
+        header {
+            padding: 60px;
+            text-align: center;
+            background-color: beige;
+            margin: 5px;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+       
+        .box1 {
+            float: left;
+            width: 65%;
+            padding: 8px;
+        }
+
+        .box2 { 
+            float: left;
+            width: 35%;
+            padding: 8px;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .main1 {
+            margin-top: 10px;
+            background-color: lightcyan;
+        }
+        .side {
+            margin-bottom: 15px;
+            padding: 10px; 
+            background-color: lightcyan;
+        }
+        .main1 h2 {margin: 0px;}
+        .main1 {
+            padding: 10px;
+        }
+        .box2 h2 {
+            margin: 0;
+        }
+
+        main .box1 img:hover {size: 150%;}
+
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div><h1>Weekly News</h1></div>
+    </header>
+
+    <main>
+        <div class="main_news">
+            <article class="box1">
+                <div><img src="./img/news.jpg" alt="" width="100%"></div>
+                <div class="main1">
+                    <h2>S. Korea’s imports of Japanese products recover on waning boycott</h2>
+                    <p>South Korean imports from Japan have risen amid easing of consumer boycott since summer of last year amid diplomatic and trade frictions.
+
+                    Korea’s trade deficit against Japan widened $16.56 billion in the January-October period this year from $16.42 billion a year earlier, according to the Korea International Trade Association on Thursday. Korea’s exports to Japan fell 13.0 percent on year to $20.63 billion, while imports fell smaller 7.3 percent on year to $37.19 billion.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="side_news">
+            <article class="box2">
+                <div class="side">
+                    <h2>BOK more positive on econ for this and next year, but unready to change rate</h2>
+                    <p>The Bank of Korea (BOK) has turned more upbeat about the economic fallout from the coronavirus this year and a rebound next year, but maintained that stimuli must stay intact as it remains to be seen if the economy is safely in the recovery phase.</p>
+                </div>
+                <div class="side">
+                    <h2>More than 400 mom-and-pop stores close down in Seoul in Q2 alone</h2>
+                    <p>PC bangs, or internet cafes where Koreans hang out for group games, and fried chicken shops, popular late-night snack and drinking locations, closed most in Seoul in the wake of Covid-19 outbreak.
+                    </p>
+                </div>
+                <div class="side">
+                    <h2>More than 400 mom-and-pop stores close down in Seoul in Q2 alone</h2>
+                    <p>PC bangs, or internet cafes where Koreans hang out for group games, and fried chicken shops, popular late-night snack and drinking locations, closed most in Seoul in the wake of Covid-19 outbreak.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+</body>
+</html>

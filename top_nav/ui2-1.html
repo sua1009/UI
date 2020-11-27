@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ui">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui 2-1</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #8dbaec;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+        }
+
+        /* display : block 인 태그에 width의 크기를 지정하고 magin값 중 left, right를 auto로 주면 중앙 정렬됨 */
+        section {
+            width: 960px;
+            margin: 0px auto;
+        }
+
+        article {
+            margin : 10px
+        }
+
+        /* 이미지를 넣기 위한 공간  */
+        .box-img {
+            float: left;
+            width: 33%;
+        }
+
+        /* 부모 태그의 크기만큼 이미지의 크기를 설정하기 위함 */
+        .box-img img { width: 100%; }
+
+        /* 텍스트를입력하기 위한 공간 */
+        .box-text {
+            float: left;
+            width: 66%;
+            padding: 15px;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>제목부분</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+             <div class="box-img">
+                    <img src="./img/img_5terre.jpg" alt="">
+             </div>
+                <div class="box-text">
+                <h2>5Terre</h2>
+                <p>풍부하게 보이는 수 것은 우리는 실로 그리하였는가? 같이, 우리는 설레는 끝까지 이는 황금시대다. 하여도 남는 황금시대의 일월과 거친 것이다. 용기가 싹이 대한 얼음에 불어 찾아다녀도, 봄바람이다. 피부가 황금시대를 밝은 같이 못하다 들어 사막이다. 없으면 붙잡아 별과 있는가? 힘차게 방황하여도, 할지라도 꽃이 간에 들어 불어 귀는 굳세게 운다. 꾸며 곳으로 것은 굳세게 우리는 끓는 인생을 있으랴? 보이는 착목한는 길을 앞이 그들은 모래뿐일 얼음 봄바람을 바이며, 보라. 청춘을 심장의 원대하고, 그들은 것은 것이다.</p>
+             </div>
+            </article>
+        </section>
+    </main>
+    
+</body>
+</html>

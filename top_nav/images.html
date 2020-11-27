@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side by side</title>
+
+    <style>
+
+        * { box-sizing: border-box;  }
+
+        header {
+            background-color: lightskyblue;
+            color: white;
+            padding: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        .card { 
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            }
+
+        .img-container {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 300px;
+            }
+
+        .box::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .text {
+            padding: 4px 16px;
+        }
+
+        .img-container p {
+            font-weight: bold;
+            padding: 15px;
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <header><h2>Summer Holiday</h2></header>
+    <main>
+    <div class="box">
+        <div class="card">
+            <div class="img-container">
+                <img src="./img/img_5terre.jpg" alt="">
+                <div class="text"><p>5 terre</p></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img src="./img/img_corniglia.jpg" alt="">
+                <div class="text"><p>corninglia</p></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img src="./img/img_manarola.jpg" alt="">
+                <div class="text"><p>manarola</p></div>
+            </div>
+        </div>   
+    </div>
+    <div class="box">
+        <div class="card">
+            <div class="img-container">
+                <img src="./img/img_riomaggiore.jpg" alt="">
+                <div class="text"><p>riomaggiore</p></div>
+            </div>
+        </div>    
+        <div class="card">
+            <div class="img-container">
+                <img src="./img/img_manarola.jpg" alt="">
+                <div class="text"><p>manarola</p></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img src="./img/img_monterosso.jpg" alt="">
+                <div class="text"><p>monterosso</p></div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    
+</body>
+</html>
