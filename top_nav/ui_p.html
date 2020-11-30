@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui_p</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { 
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header >div {
+            margin: 0;
+            padding: 30px;
+            background-color: gray;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 4em;
+            color: white;
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 960px;
+        }
+
+        section {
+            width: 60%;
+            float: left ;
+        }
+
+        aside {
+            width: 40%;
+            float: left;
+        }
+
+        maing::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        article .text1{
+            background-color: lightgray;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        article img {
+            width: 100%;
+            margin: 10px;
+            padding-right: 20px;
+        }
+
+        aside >.side {
+            background-color: lavenderblush;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        aside >.news1 {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div><h1>Weekly News</h1></div>
+    </header>
+    
+    <main>
+        <section>
+            <article>
+                <div><img src="./img/news.jpg" alt=""></div>
+                <div class="text1">
+                    <h2>S. Korea’s imports of Japanese products recover on waning boycott </h2>
+                    <p>South Korean imports from Japan have risen amid easing of consumer boycott since summer of last year amid diplomatic and trade frictions. Korea’s trade deficit against Japan widened $16.56 billion in the January-October period this year from $16.42 billion a year earlier, according to the Korea International Trade Association on Thursday. Korea’s exports to Japan fell 13.0 percent on year to $20.63 billion, while imports fell smaller 7.3 percent on year to $37.19 billion.</p>
+                </div>
+            </article>
+        </section>
+
+
+        <aside>
+            <div class="side news1">
+                <h2>BOK more positive on econ for this and next year, but unready to change rate</h2>
+                <p>The Bank of Korea (BOK) has turned more upbeat about the economic fallout from the coronavirus this year and a rebound next year, but maintained that stimuli must stay intact as it remains to be seen if the economy is safely in the recovery phase.</p>
+            </div>
+            <div class="side news2">
+                <h2>More than 400 mom-and-pop stores close down in Seoul in Q2 alone</h2>
+                <p>PC bangs, or internet cafes where Koreans hang out for group games, and fried chicken shops, popular late-night snack and drinking locations, closed most in Seoul in the wake of Covid-19 outbreak.</p>
+            </div>
+            <div class="side news3">
+                <h2>More than 400 mom-and-pop stores close down in Seoul in Q2 alone</h2>
+                <p>PC bangs, or internet cafes where Koreans hang out for group games, and fried chicken shops, popular late-night snack and drinking locations, closed most in Seoul in the wake of Covid-19 outbreak.</p>
+            </div>
+
+        </aside>
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>

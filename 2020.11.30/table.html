@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            padding: 10px;
+        }
+
+        /* l-table, m-table, r-table{
+            display: inline-block;
+         
+        } */
+
+        main{
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        main .table1 {
+            border: 1px solid rgb(209, 206, 206);
+            text-align: center;
+            padding: px;
+        }
+        .mtable>.box1 {
+            background-color: rgb(5, 172, 5);
+            color: white;
+            font-size: 24px;
+            padding: 30px;
+            font-weight: bold;
+        }
+
+        .ltable>.box1, .rtable>.box1{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 30px;
+        }
+        
+        .ltable, .mtable, .rtable { 
+            float: left;
+            width: 31%;
+            margin:10px;
+            justify-content: space-between;}
+
+        .ltable { margin-left: 35px;}
+        
+
+        main::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        button {
+            background-color: rgb(5, 172, 5);
+            padding: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: rgb(190, 189, 189);
+            color: black;
+            cursor: pointer;
+        }
+      
+
+        .box6 {
+            padding: 15px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .box6>p {
+            font-size: initial;
+            font-weight: initial;
+        }
+
+        .box2, .box3, .box4, .box5 {
+            padding: 20px;
+        }
+
+        .box7 {
+            padding: 25px;
+            background-color: aliceblue;
+        }
+
+        .ltable:hover {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+        
+        .mtable:hover {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+        .rtable:hover {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+      
+
+       
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Pricing Tables</h1>
+    </header>
+
+    <main>
+        <div class="ltable">
+            <div class="table1 box1">Basic</div>
+            <div class="table1 box2"><b>10GB</b> Storage</div>
+            <div class="table1 box3"><b>10</b> Emails</div>
+            <div class="table1 box4"><b>10</b> Domains</div>
+            <div class="table1 box5"><b>Endless</b> Support</div>
+            <div class="table1 box6">$ 10<p>per month</p></div>
+            <div class="table1 box7"><button>Sign up</button></div>
+        </div>
+
+        <div class="mtable">
+            <div class="table1 box1">Pro</div>
+            <div class="table1 box2"><b>25GB</b> Storage</div>
+            <div class="table1 box3"><b>25</b> Emails</div>
+            <div class="table1 box4"><b>25</b> Domains</div>
+            <div class="table1 box5"><b>Endless</b> Support</div>
+            <div class="table1 box6">$25<p>per month</p></div>
+            <div class="table1 box7"><button>Sign up</button></div>
+        </div>
+
+        <div class="rtable">
+            <div class="table1 box1">Premium</div>
+            <div class="table1 box2"><b>50GB</b> Storage</div>
+            <div class="table1 box3"><b>50</b> Emails</div>
+            <div class="table1 box4"><b>50</b> Domains</div>
+            <div class="table1 box5"><b>Endless</b> Support</div>
+            <div class="table1 box6">$ 50<p>per month</p></div>
+            <div class="table1 box7"><button>Sign up</button></div>
+        </div>
+    </main>
+    
+</body>
+</html>

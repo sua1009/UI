@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul을 이용한 table</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-weight: normal;
+            font-size: 40px;
+            margin: 10px;
+        }
+
+        .table1, .table2, .table3 {
+            float: left;
+            border: 1px solid lightgray;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            text-align: center;
+            width: 31%;
+        }
+
+
+        main>div::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        main>div li {
+            border: 1px solid lightgray;
+            width: 100%;
+            padding: 20px 50px;
+        }
+
+        .title1, .title3 {
+            background-color: black;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .title2 {
+            background-color:rgb(63, 163, 63);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: rgb(63, 163, 63);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(218, 214, 214);
+            color: black;
+        }
+
+        .bottom {
+            background-color: aliceblue;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <header>
+        <div><h1>Responsive Pricing Tables</h1></div>
+    </header>
+
+    <main>
+        <div>
+            <ul class="table1">
+                <li class="title1">Basic</li>
+                <li><span>10GB</span> Storage</li>
+                <li><span>10</span> Emails</li>
+                <li><span>10</span> Domains</li>
+                <li><span>Endless</span>Support</li>
+                <li><span>$ 10</span></li>
+                <li class="bottom"><button>Sign Up</button></li>
+            </ul>
+
+            <ul class="table2">
+                <li class="title2">Pro</li>
+                <li><span>25GB</span> Storage</li>
+                <li><span>25</span> Emails</li>
+                <li><span>25</span> Domains</li>
+                <li><span>Endless</span>Support</li>
+                <li><span>$ 25</span></li>
+                <li class="bottom"><button>Sign Up</button></li>
+            </ul>
+
+            <ul class="table3">
+                <li class="title3">Primium</li>
+                <li><span>50GB</span> Storage</li>
+                <li><span>50</span> Emails</li>
+                <li><span>50</span> Domains</li>
+                <li><span>Endless</span>Support</li>
+                <li><span>$ 50</span></li>
+                <li class="bottom"><button>Sign Up</button></li>
+            </ul>
+        </div>
+    </main>
+    
+</body>
+</html>
