@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Noto Sans KR', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            }
+
+        img {
+            padding-top: 15px;
+            float: left;
+            }
+
+            /* position : absolute -->부모태그의 시작위치를 기반으로 하여 원하는 위치에 배치가 가능함 */
+        header p {
+            float: right;
+            padding-top: 20px;
+            padding-right: 20px;
+            font-size: 20px;
+            letter-spacing: 3px;
+            line-height: 25px;
+            color: gray;
+        }
+
+        .top1::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .top1 { padding: 10px;}
+       
+        header ul {
+            list-style-type: none;
+            overflow: hidden;
+        }    
+
+        header li {
+            float: left;
+            color: white;
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 15px;
+            /* 글자 사이 간격 조정  */
+            letter-spacing: 1px;
+        }
+
+        header li:hover { 
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        header ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        nav {
+            background-color: rgb(90, 206, 90);
+        }
+
+        aside, section {
+            float: left;
+        }
+        main {
+            margin: 0 auto;
+            max-width: 1500px;
+            width: 100%;
+            }
+        aside {
+            width: 15%;
+        }
+
+        section {
+            width: 80%;
+            margin: 20px;
+            padding: 15px;}
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        aside ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+
+        aside li {
+            padding: 5px 40px;
+            margin: 10px 0px;
+        }
+
+        /* list 안에 a 태그를 둘 경우 */
+        /* display : block  (a태그의 영역 확대를 위해 사용)
+            text decoration : none ;(a 태그의 밑줄을 없애주기 위해 사용) */
+
+        aside .ho:hover {
+            background-color: rgb(182, 180, 180);
+            color: black;
+            cursor: pointer;
+        }
+
+        .top{
+            font-size: 20px;
+            font-weight: bold;
+            
+        }
+
+        section {
+            background-color: rgb(228, 228, 228);
+            /* box-shadow : 오른쪽 그림자, 아래 그림자, 흐림정도 , 색상 */
+            box-shadow:0 0px 10px 0 rgba(0,0,0,0.15),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+        section h1 {
+            font-size: 4em;
+            font-weight: 500;
+            padding: 20px;
+        }
+
+        section h3 { 
+            font-size: 30px;
+            font-weight: 400;
+            padding: 10px; }
+
+        button {
+            background-color:rgb(90, 206, 90) ;
+            color: white;
+            padding: 8px 16px;
+            margin: 5px;
+            border: 0;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .tag {
+            background-color: white;
+            border-left: 3px solid rgb(90, 206, 90);
+            margin: 5px 5px;
+            padding: 20px;
+            padding-left: 0;
+            font-size: 16px;
+        }
+
+        .tag >pre { 
+            padding-left: 0px;
+            text-align: left;
+        }
+
+        .brown { color: brown;}
+
+        .red {color: red;       }
+
+        .blue {color: blue;}
+
+
+    </style>
+</head>
+<body>
+    <header>
+    <div class="top1">
+        <img src="./w3schools.png" alt="">
+        <p>THE WORLD'S LARGEST WEB DEVELOPER SITE</p>
+    </div>
+        <nav>
+            <ul>
+                <li>TUTORIALS</li>
+                <li>REFERENCES</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <ul>
+                <li class="tuto top">Tutorials</li>
+                <li class="tuto ho">Learn HTML</li>
+                <li class="tuto ho">Learn CSS</li>
+                <li class="tuto ho">Learn W3.CSS</li>
+                <li class="tuto ho">Learn Colors</li>
+                <li class="tuto ho">Learn Javascript</li>
+                <li class="tuto ho">Learn XML</li>
+                <li class="tuto ho">Learn SQL</li>
+                <li class="tuto ho">Learn PHP</li>
+            </ul>
+        </aside>
+        <section>
+            <h1>CSS</h1>
+            <h3>The Language for Styling Web Pages</h3>
+            <div class="bu">
+                <button>LEARN CSS</button>
+                <button>CSS REFERENCE</button>
+            </div>
+            <div class="tag">
+<pre>
+    <span class="brown">body</span> {
+        <span class="red">backgound-color</span>: <span class="blue">#d0e4fe;</span>
+    }
+    <span class="brown">h1</span>{
+        <span class="red">color</span>: <span class="blue">orange;</span>
+        <span class="red">text-align</span>: <span class="blue">center;</span>
+    }
+    <span class="brown">p</span> {
+        <span class="red">font-family</span> : "<span class="blue">Times New Roman";</span>
+        <span class="red">font-size</span> : <span class="blue">20px;</span>
+    }
+</pre>
+            </div>
+            <div class="bu"><button>Try it Yourself</button></div>
+        </section>
+
+    </main>
+
+    
+</body>
+</html>

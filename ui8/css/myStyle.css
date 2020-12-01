@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+}
+
+header {
+    padding: 10px;
+    display: fixed;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+header div {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0px 20px;
+    padding: 5px 10px;
+}
+
+header div:hover {
+    background-color: rgb(195, 195, 195);
+    cursor: pointer;
+}
+.imgbox>div {
+    position: relative;
+}
+.inside {
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+header a {
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 5px 10px;
+}
+
+header a:hover {
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+.lefttnav{
+    float: left;
+}
+
+.rightnav{
+    float: right;
+    margin-top: 10px;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.imgbox {
+    margin-top: 50px;
+}
+
+.imgbox img { width: 100%;}
+
+.left1>img {width: 100%;}
+
+.left1 { 
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.right1 { 
+    float: left;
+    width: 50%;
+    padding: 10px;
+ }
+.about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.right2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.menu::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    padding: 30px;
+}
+
+.menu img {
+    width: 100%;
+}
+
+.name{
+    padding: 20px 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+

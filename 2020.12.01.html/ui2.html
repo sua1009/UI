@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <style>
+            * { 
+                font-family: 'Noto Sans KR', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            aside, section, header { float: left; }
+            body { width: 100%;}
+            aside { width: 15%;}
+            section { width: 85%;}
+            header{width: 85%;}
+
+            
+            body::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .i { 
+                background-color: black;
+                }
+
+            aside .icon {
+                font-size: 30px;
+                color: white;
+                width: 31%;
+                height: 100%;
+                text-align: center;
+                padding: 10px;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+
+            aside .icon:hover {
+                background-color: gainsboro;
+                color: black;
+                margin: 0;
+                cursor: pointer;
+            }
+            
+            .img { 
+                border : 2px solid lightgray;
+                padding: 5px;
+                }
+
+            .header {
+                width: 100%;
+                background-color: rgb(18, 153, 153) ;
+                color: white;
+                padding: 80px;
+                text-align: center;
+                font-size: 2em;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+
+            aside li {
+                padding: 10px;
+                font-size:20px ;
+            }
+
+            aside li:hover{
+                background-color: rgb(167, 167, 167);
+                cursor: pointer;
+            }
+
+            section {
+            background-color: rgb(228, 228, 228);
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+
+        section h1 {
+            font-size: 4em;
+            font-weight: 400;
+            padding: 20px;
+        }
+
+        section h3 { 
+            font-size: 30px;
+            font-weight: 400;
+            padding: 10px; }
+
+        button {
+            background-color: rgb(18, 153, 153) ;
+            color: white;
+            padding: 8px 15px;
+            margin: 13px;
+            border: 0;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .tag {
+            background-color: white;
+            border-left: 3px solid rgb(90, 206, 90);
+            margin: 0px 10px;
+            padding: 20px;
+            padding-left: 0;
+            font-size: 16px;
+        }
+
+        .tag >pre { 
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .brown { color: brown;}
+
+        .red {color: red;       }
+
+        .blue {color: blue;}
+
+        </style>
+</head>
+<body>
+    <aside>
+        <div class="i">
+            <i class="fa fa-align-justify icon"></i>
+            <i class="fa fa-file-o icon"></i>
+            <i class="fa fa-camera icon"></i>
+        </div>
+        <div class="img">
+            <img src="./w3schools.png" alt="">
+        </div>
+        <ul>
+            <li>Learn HTML</li>
+            <li>Learn W3.CSS</li>
+            <li>Learn JavaScript</li>
+            <li>Learn SQL</li>
+            <li>Learn PHP</li>
+        </ul>
+    </aside>
+
+    <header>
+        <div class="header">
+            <h1>W3school.com</h1>
+        </div>
+    </header>
+
+    <section>
+        
+    <div class="css">
+        <h1>CSS</h1>
+        <h3>The Language for Styling Web Pages</h3>
+        <div class="bu">
+            <button>LEARN CSS</button>
+            <button>CSS REFERENCE</button>
+        </div>
+        <div class="tag">
+<pre>
+<span class="brown">body</span> {
+    <span class="red">backgound-color</span>: <span class="blue">#d0e4fe;</span>
+}
+<span class="brown">h1</span>{
+    <span class="red">color</span>: <span class="blue">orange;</span>
+    <span class="red">text-align</span>: <span class="blue">center;</span>
+}
+<span class="brown">p</span> {
+    <span class="red">font-family</span> : "<span class="blue">Times New Roman";</span>
+    <span class="red">font-size</span> : <span class="blue">20px;</span>
+}
+</pre>
+        </div>
+        <div class="bu"><button>Try it Yourself</button></div>
+    </div>
+    </section>
+    
+    
+</body>
+</html>
