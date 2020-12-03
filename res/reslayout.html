@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>res</title>
+    <style>
+        /* 전체 기본 css 속성 */
+        .res {
+            background-color: coral;
+            height: 50px;
+        }
+
+        .res h3 {
+            display: none;
+        }
+
+        .res h5 { display: none;}
+         
+         /* 화면 크기가 최대 1200px까지  */
+        @media screen and (max-width: 1200px){
+            .res {background-color: yellow;}
+        }
+
+        /* 화면 크기가 최대 992px까지  */
+        @media screen and (max-width: 992px){
+            .res {background-color: blue;}
+        }
+
+         /* 화면 크기가 최대 768px까지  */
+         /* 스마트폰 */
+         @media screen and (max-width: 768px){
+            .res {background-color: green;}
+            .res h1 { display: none; }
+            .res h3 { display: block; }
+           
+        }
+
+        /* 화면 크기가 최대 567px까지  */
+        /* 구형 스마트폰의 경우 소형 디바이스 */
+         @media screen and (max-width: 567px){
+            .res {background-color: cornflowerblue;}
+            .res h1 { display: none; }
+            .res h3 { display: none; }
+            .res h5 { display: block;}
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="res">
+        <h1 class="hideh1">화면의 크기에 따라 숨겨지는 h1 태그</h1>
+        <h3 class="showh3">화면의 크기가 작아지면 출력되는 h3 태그</h3>
+        <h5 class="showh5">화면의 크기가 작아지면 출력되는 h5</h5>
+    </div>
+
+
+    
+</body>
+</html>

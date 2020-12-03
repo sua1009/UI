@@ -1,0 +1,55 @@
+.flex-container {
+    display: flex;
+    background-color: rgb(110, 176, 243);
+    margin-bottom: 15px;
+}
+
+.flex-container>div {
+    background-color: lightcoral;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    /* 줄간격 */
+    line-height: 75px;
+}
+
+#div03 .card1 { flex-direction: column; }
+#div03 .card2 { flex-direction: column-reverse;}
+#div03 .card3 { flex-direction: row;} 
+#div03 .card4 { flex-direction: row-reverse;}
+
+
+#div04 .wrap { flex-wrap: wrap;}
+#div04 .wrap-reverse { flex-wrap: wrap-reverse;}
+#div04 .nowrap {flex-wrap: nowrap;}
+
+#div05 .flex-flow{ flex-flow: row wrap;}
+
+#div06 .center {justify-content: center;}
+#div06 .flex-start {justify-content: flex-start;}
+#div06 .flex-end {justify-content: flex-end;}
+#div06 .space-around {justify-content: space-around;}
+#div06 .space-between {justify-content: space-between;}
+
+
+.flex-container2 {
+    display: flex;
+    height: 200px;
+    background-color: dodgerblue;
+}
+
+.flex-container2>div {
+    background-color: lightgoldenrodyellow;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 32px;
+}
+
+#div07 .center { align-items: center; }
+#div07 .flex-start { align-items: flex-start; }
+#div07 .flex-end { align-items: flex-end; }
+#div07 .flex-stretch { align-items: stretch; }
+#div07 .flex-baseline { align-items: baseline; }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restest</title>
+
+    <style>
+        * { box-sizing: border-box;}
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            /* display: block 인 태그를 width 값을 주고 margin의 left, right를 auto를 주게 되면 중앙 정렬 */
+            background-color: rgb(217, 241, 220);
+            margin: 0 auto;
+            max-width: 50%;
+            padding: 20px;
+        }
+
+        input {
+            display: block;
+            margin: 0 auto;
+            width: 95%;
+            font-size: 32px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: green;
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        .bu {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            margin: 0 auto;
+            max-width: 95%;
+            text-align: center;
+        }
+
+        .bu:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            input {font-size: 16px;}
+            .bu {background-color: yellowgreen;}
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 문제 1. 특정 사이트에 로그인 하기 위한 id 및 pw 입력 창을 만들고, 로그인 버튼도 생성하세요 -->
+    <!-- ps. 화면의 크기에 따라 id/pw 글자 크기를 변경됨 
+            화면의 크기는 768px을 기준으로 함
+            폰트의 그기는 (화면이 클 경우)32px, (작을 경우)16px을 사용
+            다른 css 속성은 마음대로 추가  -->
+
+    <form action="">
+        <div class="login">
+            <h2>Login</h2>
+            <div class="in">
+            <input type="text" placeholder="아이디">
+            <input type="text" placeholder="비밀번호">
+            <div type="button" class="bu">로그인</div>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
