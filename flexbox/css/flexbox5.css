@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+/* 
+font-family: 'Noto Sans KR', sans-serif; */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+header {
+    padding: 60px; 
+    text-align: center;
+    background-color: rgb(250, 178, 189);
+    color: white;
+}
+
+nav {  background-color: rgb(143, 143, 143); }
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li { float: left;}
+
+nav::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav li>a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+}
+
+nav li>a:hover {
+    background-color: rgb(248, 192, 206);
+    color: black;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(240, 240, 240);   
+}
+
+main {
+  
+    flex-wrap: wrap;
+}
+
+main::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+aside {
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    float: left;
+    width: 30%;
+    height: 1000px;
+}
+
+section {
+    float: left;
+    padding: 20px;
+    width: 70%;
+}
+
+.fake-img {
+    background-color: rgb(160, 160, 160);
+    width: 100%;
+    padding: 20px;
+}
+
+.photo-me {  height: 200px; }
+.photo-post{  height: 200px;}
+
+.photo-link{ height: 60px;}
+
+article {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+@media all and (max-width : 768px){
+    aside, section, nav li {
+        /* flex-direction: column; */
+        /* float 사용시 main의 자손태그인 aside, section의 width를 100%로 변경  */
+        width: 100%;
+    }
+}
+
+/* flex box를 사용하여 만들어진 현재 사이트를 float을 사용하는 방식으로 하여 작성하세요  */

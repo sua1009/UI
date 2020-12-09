@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 네비게이션 res-nav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./jquery-3.5.1.js">
+    </script>
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        .topnav a {
+            /* ul, li 태그를 사용하지 않고 네비게이션바로 만들기 때문에 a태그에 float:left를 사용  */
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .topnav a:hover {
+            background-color: grey;
+            color: white;
+        }
+
+        /* 화면이 작을 때만 출력하는 버튼을 평상시에는 숨김 */
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 576px) {
+            /* first-child : 작계 자손태그 중 첫번재 태그를 선택하는 선택자  */
+            /* :not : 선택한 태그와 반대되는 태그를 선택하는 선택자  */
+            /* .topnav 클래스명을 가진 태그의 후손태그 중 첫번째 태그를 제외한 모든 태그  */
+            .topnav a:not(:first-child) {display: none;}
+            /* a 태그이면서 클래스명이 icon인 태그를 선택  */
+            .topnav a.icon{
+                float: right;
+                display: block;
+            }
+
+            .topnav.res {position: relative;}
+
+            .topnav.res .icon{ 
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.res a {
+                /* 기존의 a 태그는 float:left를 사용하여 가로형 메뉴로 사용되고 있었으나, float:none을 사용하여 float속성을 clear 시켜줌  */
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+
+    <script>
+       $(document).ready(function(){
+           $("#icon").on("click",function(){
+               $(".topnav").toggleClass("res");
+           });
+       });
+
+    </script>
+</head>
+<body>
+    <nav class="topnav" id="myTopnav">
+        <a >링크 1</a>
+        <a >링크 2</a>
+        <a >링크 3</a>
+        <a >링크 4</a>
+
+        <!-- 화면이 작아졌을 경우 표시할 메뉴 버튼 -->
+        <a class="icon" id="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <p>화면 크기에 따라서 메뉴가 숨겨짐 ( 576px )</p>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+* { box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    padding: 60px;
+    margin-bottom: 5px;
+}
+
+header>h1 {
+    color: white;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+article>img {
+    
+    width: 100%;
+}
+
+article { 
+    padding: 0 5px;
+    float: left;
+    width: 25%;}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width : 768px ){
+    article {width: 50%;}
+}
+
+@media screen and (max-width : 576px ){
+    article {width: 100%;}
+}
+

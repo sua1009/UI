@@ -1,0 +1,48 @@
+* { box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    padding: 60px;
+    margin-bottom: 5px;
+}
+
+header>h1 {
+    color: white;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+section{
+    display: flex; 
+    flex-direction: row;
+}
+
+article {
+    flex: 25%;
+}
+
+article>img {
+    padding: 3px;
+    width: 100%;
+}
+
+@media screen and (max-width : 768px){
+    section { flex-wrap: wrap; }
+    article { flex : 50%; }
+}
+
+@media screen and (max-width : 576px){
+    section {flex-direction: column;}
+}
+
+
+
+
+
+

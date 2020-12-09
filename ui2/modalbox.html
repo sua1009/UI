@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal box 사용</title>
+    <script src="./jquery-3.5.1.js"></script>
+<style>
+    .modal {
+        /* 처음에 출력하면 안되기 때문에 display: none */
+        display: none;
+        /* 모달창 이외의 부분의 UI는 동작하면 안되기 때문에 positionLfixed를 사용하여 웹 브라우저의 body영역 전체에 고정 */
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        padding-top: 100px;
+        /* 화면 전체를 커버하기 위해서 높이 너비 100% */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        /* 모달창 이외의 부분은 투명도 조절을 통해서 비활성화 했다는 것을 알리기 위해 rgba를 사용 */
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-content {
+        background-color: rgb(236, 236, 236);
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #888888;
+        width: 80%;
+    }
+
+    /*  */
+    .btn-close {
+        color: gray;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .btn-close:hover, .btn-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("#btnOpen").on("click",function(){
+            $("#modal").css("display","block");
+        });
+        $("#btnClose").on("click", function(){
+            $("#modal").css("display","none");
+        });
+    })
+
+</script>
+
+</head>
+<body>
+    <!-- 버튼 클릭 시 아래의 modal box 영역을 출력함  -->
+    <button id="btnOpen">Open Modalbox</button>
+    
+    <!-- 평상시에는  display: none을 통하여 숨겨진 영역  -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="btn-close" id="btnClose">&times;</span>
+            <p>모달박스를 사용하여 팝업창 사용</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

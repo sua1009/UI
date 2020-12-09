@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+
+.left {
+    background-color: lightcoral;
+    padding: 10px;
+    flex: 33.33%;
+}
+
+.center {
+    background-color: lightskyblue;
+    padding: 10px;
+    flex: 33.33%;
+}
+
+.right {
+    background-color: lightseagreen;
+    padding: 10px;
+    flex: 33.33%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* 576px, 768px, 992px, 1200px 를 기준으로 나눔(bootstrap 기준) */
+@media screen and (max-width : 576px ) {
+    .flex-container {
+        flex-direction: column;
+    }
+}

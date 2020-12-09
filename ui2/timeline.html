@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    * { box-sizing: border-box; }
+
+    body {
+        background-color: darkgrey;
+    }
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        /* 중앙정렬 */
+        margin: 0 auto;
+    }
+
+    /* :::after, :::before 가상 클래스  */
+    /* before : 지정한 태그의 앞에서 동작 */
+    /* after : 지정한 태그의 뒤에서 동작 */
+    /* 타임라인 중앙선을 그리기 */
+    .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        /* 타임라인을 중앙에 배치하기 위함 */
+        left:49.5%;
+        margin-left: 3px;
+    }
+
+    .container {
+        padding: 10px 40px;
+        position: relative;
+        background: inherit;
+        /* 전체 크기의 50%의 너비를 사용  */
+        width: 50%;
+    }
+
+    /*  container 클래스에 after를 사용하여 containerㅋ르래스를 사용하면 자동으로 원형을 그려줌  */
+    .container::after {
+        content: "";
+        position: absolute;
+        /* 자동으로 그려지는 도형의 크기 25 * 25px  */
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #ff9f55;
+        top: 15px;
+        z-index: 100;
+    }
+
+    .left { left: 0; }
+
+    .right { left: 50%; }
+    
+    /* left가 그려지기 전에 추가로 그려짐  */
+    .left::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 22px;
+        z-index: 100;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0px 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
+
+    .right::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 22px;
+        left: 30px;
+        z-index: 100;
+        border : medium solid white;
+        border-width: 10px 10px 10px 0px;
+        border-color: transparent white transparent transparent;
+    }
+
+    .right::after {left: -16px;}
+
+    .content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p>오아이스도 찾아다녀도, 속에서 끓는 보라. 대고, 미인을 별과 때까지 남는 트고, 이것은 스며들어 품에 쓸쓸하랴?</p>
+            </div>
+        </div>
+    
+
+        <div class="container right">
+            <div class="content">
+                <h2>2019</h2>
+                <p>오아이스도 찾아다녀도, 속에서 끓는 보라. 대고, 미인을 별과 때까지 남는 트고, 이것은 스며들어 품에 쓸쓸하랴?</p>
+            </div>
+        </div>
+
+        <div class ="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p>오아이스도 찾아다녀도, 속에서 끓는 보라. 대고, 미인을 별과 때까지 남는 트고, 이것은 스며들어 품에 쓸쓸하랴?</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2017</h2>
+                <p>오아이스도 찾아다녀도, 속에서 끓는 보라. 대고, 미인을 별과 때까지 남는 트고, 이것은 스며들어 품에 쓸쓸하랴?</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

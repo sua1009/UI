@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+
+body { 
+    background-image: url("./forest.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+main {
+    height: 900px;
+    position: relative;
+}
+
+.left-top {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.title {
+    font-size: 32px;
+    color: white;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title> h1 {
+    font-weight: 400;
+    text-align: center;
+    
+}
+
+.middle-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.asis-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.title {
+    animation-name: ani;
+    animation-delay: 0;
+    animation-duration: 2s;
+}
+
+@keyframes ani {
+    from {
+        top: 30%;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;}
+}
+
+.line {
+    border-top: 1px solid white;
+    width: 300px;
+}
+
+
+
+.left-bottom {
+    color: white;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
